@@ -25,7 +25,7 @@
         </div>
         <div style="float:right;">
             <xsl:value-of select="sum($subTotal/ItemCost) + bs:costs/bs:cost/@value"/>
-            Points
+            Punkte
         </div>
     </div>
     <!-- Unit -->
@@ -33,15 +33,15 @@
         <table>
             <tr class="unit-line">
                 <th>Name</th>
-                <th>M</th>
-                <th>WS</th>
-                <th>BS</th>
+                <th>B</th>
+                <th>KG</th>
+                <th>BF</th>
                 <th>S</th>
-                <th>T</th>
                 <th>W</th>
+                <th>LP</th>
                 <th>A</th>
-                <th>Ld</th>
-                <th>Sv</th>
+                <th>Mw</th>
+                <th>Rw</th>
             </tr>
             <tr>
                 <td>
@@ -91,13 +91,13 @@
     <div>
         <table>
             <tr class="weapon-line">
-                <th>Weapon</th>
-                <th>Range</th>
-                <th>Type</th>
+                <th>Waffe</th>
+                <th>Reichw.</th>
+                <th>Typ</th>
                 <th>S</th>
-                <th>AP</th>
-                <th>D</th>
-                <th class="ability">Abilities</th>
+                <th>DS</th>
+                <th>SW</th>
+                <th class="ability">Fähigkeiten</th>
             </tr>
             <xsl:for-each select="bs:selections/bs:selection">
                 <xsl:if test="not(contains($specialisms, @name))">
@@ -213,7 +213,7 @@
 
     <!-- Abilities -->
     <div>
-        <span class="abilities-heading">Abilities:</span>
+        <span class="abilities-heading">Fähigkeiten:</span>
         <table>
             <xsl:for-each select="bs:profiles/bs:profile">
                 <xsl:if test="@profileTypeName='Ability'">
@@ -245,7 +245,7 @@
     <div>
         <xsl:for-each select="bs:selections/bs:selection">
             <xsl:if test="contains($specialisms, @name)">
-                <span class="abilities-heading">Specialism:</span>
+                <span class="abilities-heading">Spezialisierung:</span>
                 <span class="specialism">
                     <xsl:value-of select="@name"/>
                 </span>
@@ -263,7 +263,7 @@
                         </xsl:if>
                     </xsl:for-each>
                 </table>
-                <span class="abilities-heading">Tactics:</span>
+                <span class="abilities-heading">Taktiken:</span>
                 <table>
                     <xsl:for-each select="bs:selections/bs:selection/bs:profiles/bs:profile">
                         <xsl:if test="not(@profileTypeName='Ability')">
@@ -322,14 +322,14 @@
 
     <!-- Experience -->
     <div id="experience">
-        <span>Experience: &#9744; &#9744; <font color="red">&#9744;</font> &#9744; &#9744; &#9744; <font color="red">
+        <span>Erfahrung: &#9744; &#9744; <font color="red">&#9744;</font> &#9744; &#9744; &#9744; <font color="red">
             &#9744;
         </font> &#9744; &#9744; &#9744; &#9744;
             <font color="red">&#9744;</font>
         </span>
-        <span>Flesh Wounds: &#9744; &#9744; &#9744;</span>
-        <span>Convalescence: &#9744;</span>
-        <span>New Recruit: &#9744;</span>
+        <span>Fleischwunden: &#9744; &#9744; &#9744;</span>
+        <span>Genesung: &#9744;</span>
+        <span>Neuer Rekrut: &#9744;</span>
     </div>
     <!-- /Experience -->
 

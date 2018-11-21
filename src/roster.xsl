@@ -1,35 +1,35 @@
 <div>
     <section id="roster-title">
-        <div>command roster</div>
+        <div>Kommandobogen</div>
         <hr/>
     </section>
     <section id="roster-resources" class="roster-body">
         <table class="roster">
             <tr>
-                <td class="roster-cell-heading">Player Name</td>
+                <td class="roster-cell-heading">Spielername</td>
                 <td></td>
-                <td class="roster-cell-heading">Resources</td>
-                <td class="roster-cell-heading">Current Kill Team Force</td>
-                <td>Points</td>
+                <td class="roster-cell-heading">Ressourcen</td>
+                <td class="roster-cell-heading">Aktuelle Macht des Kill Teams</td>
+                <td>Punkte</td>
             </tr>
             <tr>
-                <td class="roster-cell-heading">Faction</td>
+                <td class="roster-cell-heading">Fraktion</td>
                 <td>
                     <xsl:value-of select="@catalogueName"/>
                 </td>
-                <td>Intelligence
+                <td>Informationen
                     <span>
                         <xsl:value-of
                                 select="bs:selections/bs:selection[@name='Resources']/bs:selections/bs:selection[@name='Intelligence']/@number"/>
                     </span>
                 </td>
-                <td class="roster-cell-heading">Current Kill Team's Name</td>
+                <td class="roster-cell-heading">Aktueller Name des Kill Teams</td>
                 <td></td>
             </tr>
             <tr>
                 <td class="roster-cell-heading">Mission</td>
                 <td></td>
-                <td>Materiel
+                <td>Material
                     <span>
                         <xsl:value-of
                                 select="bs:selections/bs:selection[@name='Resources']/bs:selections/bs:selection[@name='Materiel']/@number"/>
@@ -39,9 +39,9 @@
                 <td></td>
             </tr>
             <tr>
-                <td class="roster-cell-heading">Background</td>
+                <td class="roster-cell-heading">Hintergrund</td>
                 <td></td>
-                <td>Morale
+                <td>Moral
                     <span>
                         <xsl:value-of
                                 select="bs:selections/bs:selection[@name='Resources']/bs:selections/bs:selection[@name='Morale']/@number"/>
@@ -51,9 +51,9 @@
                 <td></td>
             </tr>
             <tr>
-                <td class="roster-cell-heading">Squad Quirk</td>
+                <td class="roster-cell-heading">Team-Eigenart</td>
                 <td></td>
-                <td>Territory
+                <td>Territorium
                     <span>
                         <xsl:value-of
                                 select="bs:selections/bs:selection[@name='Resources']/bs:selections/bs:selection[@name='1x Territory']/@number"/>
@@ -69,12 +69,12 @@
         <table class="roster">
             <tr>
                 <th>Name</th>
-                <th>Model Type</th>
-                <th>Wargear</th>
-                <th>Exp</th>
-                <th>Specialism/Abilities</th>
-                <th>Demeanour</th>
-                <th>Pts</th>
+                <th>Art des Modells</th>
+                <th>Ausrüstung</th>
+                <th>Erf</th>
+                <th>Spezialisierung/Fähigkeiten</th>
+                <th>Verhalten</th>
+                <th>Pkt</th>
             </tr>
             <!-- Unit -->
             <xsl:for-each select="bs:selections/bs:selection">
